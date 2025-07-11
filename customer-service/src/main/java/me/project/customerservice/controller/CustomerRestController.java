@@ -11,17 +11,17 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/customers")
 @RequiredArgsConstructor
+@RequestMapping("/customers")
 public class CustomerRestController {
     private final CustomerRepository customerRepository;
 
-    @GetMapping("/all")
+    @GetMapping("")
     public List<Customer> customerList(){
         return customerRepository.findAll();
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/customers/{id}")
     public Customer findById(@PathVariable Long id){
         return customerRepository.findById(id).get();
     }
