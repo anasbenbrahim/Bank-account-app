@@ -105,5 +105,11 @@ Elle simule un système bancaire de gestion des clients et des comptes, tout en 
 
 2. **Build du projet**
 
-```bash
-mvn clean install
+   ```bash
+    mvn clean install
+
+3. **Démarrer les services**
+
+   ```bash
+    docker compose up -d --build
+  
