@@ -30,6 +30,4 @@ public interface CustomerRestClient {
     default List<Customer> getDefaultCustomers(Exception exception){
         return List.of();
     }
-
-
 }

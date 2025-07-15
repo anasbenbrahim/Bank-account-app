@@ -1,0 +1,16 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: customer-service
+          uri: lb://CUSTOMER-SERVICE
+          predicates:
+            - Path=/customers/**
+          filters:
+            - StripPrefix=0
+        - id: account-service
+          uri: lb://ACCOUNT-SERVICE
+          predicates:
+            - Path=/accounts/**
+          filters:
+            - StripPrefix=0
